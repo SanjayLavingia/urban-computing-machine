@@ -9,7 +9,8 @@ class App extends Component {
     return (
       <div>
       <div>
-        From react<button>Add team</button></div>
+        <h1>From react</h1>
+        <button>Add team</button></div>
       </div>
     )
   }
