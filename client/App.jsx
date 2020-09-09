@@ -5,12 +5,15 @@ class App extends Component {
     super(props);
   }
 
+  handleClick () {
+    console.log('hello')
+  }
   render() {
     return (
       <div>
       <div>
         <h1>From react</h1>
-        <button>Add team</button></div>
+        <button onClick={this.handleClick}>Add team</button></div>
       </div>
     )
   }
