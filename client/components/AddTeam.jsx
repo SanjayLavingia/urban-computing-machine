@@ -13,32 +13,17 @@ function AddTeam(props) {
    <div>
    <Dropdown>
   <Dropdown.Toggle style={mystyle} variant="success" id="dropdown-basic">
-    Dropdown Button
+    Add Teams
   </Dropdown.Toggle>
 
   <Dropdown.Menu >
-   <div style={mystyle}><Dropdown.Item href="#/action-1">Action</Dropdown.Item></div> 
-    <div><Dropdown.Item href="#/action-2">Another action</Dropdown.Item></div>
-    <div><Dropdown.Item href="#/action-3">Something else</Dropdown.Item></div>
+   <button name={'PSG'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>PSG</Dropdown.Item></button>
+   <button name={'Liverpool'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>Liverpool</Dropdown.Item></button>
+   <button name={'Tottenham'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>Tottenham</Dropdown.Item></button>
   </Dropdown.Menu>
 </Dropdown> 
-     {/* <button style={mystyle} onClick={props.handleClick}>Add Team</button> */}
    </div>
    </div>
 }
 
 export default AddTeam; 
-
-
-
-  <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-   <div><Dropdown.Item href="#/action-1">Action</Dropdown.Item></div> 
-    <div><Dropdown.Item href="#/action-2">Another action</Dropdown.Item></div>
-    <div><Dropdown.Item href="#/action-3">Something else</Dropdown.Item></div>
-  </Dropdown.Menu>
-</Dropdown> 
