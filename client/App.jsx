@@ -27,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <div>
+      <h1>My Teams</h1>
       <div>
-        <h1>From react</h1>
         <AddTeam handleClick={this.handleClick}/>
       </div>
         <TeamThread />

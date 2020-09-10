@@ -7,7 +7,6 @@ function TeamThread(props) {
     result.push(<div key={`teamThread${i}`}>{testArray[i]} </div>)
   }
   return <div>
-    {result}
   </div>
 }
 
