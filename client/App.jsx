@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddTeam from './components/AddTeam.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends Component {
       <div>
       <div>
         <h1>From react</h1>
+        <AddTeam />
         <button onClick={this.handleClick}>Add team</button></div>
       </div>
     )

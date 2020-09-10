@@ -14,3 +14,7 @@ app.use('/build', express.static(path.join(__dirname, '../build')));
 app.use((req, res) => {
   res.sendFile(path.resolve(__dirname, '../index.html'))
 })
+//configured route handler 
+app.use((req, res) => {
+  res.sendStatus(404)
+})
