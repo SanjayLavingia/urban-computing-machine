@@ -21,12 +21,25 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   //will add team to the user 
-  res.sendStatus(314); 
+  let sqlSelect = `INSERT INTO users (name)
+                   VALUES ('fromRouter')`;
+  db.query(sqlSelect)
+    .then(data => {
+      console.log(data)
+      res.json(data)
+    })
+  // res.sendStatus(314); 
 })
 
 router.delete('/', (req, res) => {
   //will delete a team 
-  res.sendStatus(315); 
+  let sqlSelect = `DELETE FROM users WHERE name='fromRouter'`; 
+  db.query(sqlSelect)
+    .then(data => {
+      console.log(data)
+      res.json(data)
+    })
+  // res.sendStatus(315); 
 })
 
 module.exports = router; 
