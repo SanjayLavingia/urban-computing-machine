@@ -45,9 +45,8 @@ router.post('/:name', (req, res) => {
   db.query(sqlSelect)
     .then(data => {
       console.log(data)
-      res.json(data)
-    })
-  // res.sendStatus(314); 
+      res.json(createdObj[name])
+    }) 
 })
 
 router.delete('/:name', (req, res) => {

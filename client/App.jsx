@@ -34,10 +34,23 @@ class App extends Component {
         return
       }
     }
+    e.persist(); 
     fetch(`http://localhost:3000/user/${e.target.name}`, {
       method: 'POST',
     })
-      .then(res => console.log(res))
+      .then(res => res.json())
+      .then(data => {
+        let stateObj = {
+          name: e.target.name,
+          opp: data.opp,
+          date: data.date,
+          time: data.time,
+        }
+        teams.push(stateObj);
+        this.setState({
+          teams: teams
+        })
+      })
       .catch(err => console.log(err)) 
   }
 
