@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   handleClick () {
-    console.log('hello')
+    console.log('hello');
   }
   render() {
     return (
