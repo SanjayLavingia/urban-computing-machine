@@ -15,8 +15,9 @@ class App extends Component {
       <div>
       <div>
         <h1>From react</h1>
-        <AddTeam />
-        <button onClick={this.handleClick}>Add team</button></div>
+        <AddTeam handleClick={this.handleClick}/>
+        <button onClick={this.handleClick}>Add team</button>
+        </div>
         <TeamThread />
       </div>
     )
