@@ -23,3 +23,5 @@ app.use('/user', userRouter);
 app.use((req, res) => {
   res.sendStatus(404)
 })
+
+//configure global error handler 
