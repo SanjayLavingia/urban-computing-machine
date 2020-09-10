@@ -25,24 +25,44 @@ class App extends Component {
   }
 
   addTeam (e) {
-    console.log(e.target.name)
-
+    console.log(this.state);
+    const teams = this.state.teams;
+    //this loop prevents the addition of duplicate teams to both the db and state 
+    for (let i = 0; i < teams.length; i++) {
+      if (e.target.name === teams[i].name) {
+        console.log('returned before adding duplicated')
+        return
+      }
+    }
     fetch(`http://localhost:3000/user/${e.target.name}`, {
       method: 'POST',
     })
       .then(res => console.log(res))
       .catch(err => console.log(err)) 
   }
+
   remove(e) {
     console.log(e.target.name)
+    let teams = this.state.teams;
+
+    console.log(e.target.name)
+    for (let i = 0; i < teams.length; i++) {
+      if (e.target.name === teams[i].name) {
+          teams.splice(i, 1)
+      }
+    }
     //e.target.name = req.body.name
     fetch(`http://localhost:3000/user/${e.target.name}`, {
       method: 'DELETE', 
       body: 'hello',
     })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res)
+        this.setState({teams: teams})
+      })
       .catch(err => console.log(err)) 
   }
+
   render() {
     return (
       <div>
