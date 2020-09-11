@@ -10,16 +10,16 @@ function AddTeam(props) {
     fontFamily: "Arial"
   };
   return <div>
-   <div>
+   <div className="addTeamDiv">
    <Dropdown>
-  <Dropdown.Toggle style={mystyle} variant="success" id="dropdown-basic">
+  <Dropdown.Toggle className="addTeam" variant="success" id="dropdown-basic">
     Add Teams
   </Dropdown.Toggle>
 
   <Dropdown.Menu >
-   <button name={'PSG'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>PSG</Dropdown.Item></button>
-   <button name={'Liverpool'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>Liverpool</Dropdown.Item></button>
-   <button name={'Tottenham'} onClick={props.addTeam} style ={mystyle}><Dropdown.Item>Tottenham</Dropdown.Item></button>
+   <button className="teamButton" name={'PSG'} onClick={props.addTeam}><Dropdown.Item>PSG</Dropdown.Item></button>
+   <button className="teamButton" name={'Liverpool'} onClick={props.addTeam}><Dropdown.Item>Liverpool</Dropdown.Item></button>
+   <button className="teamButton" name={'Tottenham'} onClick={props.addTeam}><Dropdown.Item>Tottenham</Dropdown.Item></button>
   </Dropdown.Menu>
 </Dropdown> 
    </div>

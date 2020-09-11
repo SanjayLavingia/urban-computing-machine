@@ -79,7 +79,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h1>My Teams</h1>
+      <h1 className="myTeamsHeader">My Teams</h1>
       <div>
         <AddTeam addTeam={this.addTeam}/>
       </div>
