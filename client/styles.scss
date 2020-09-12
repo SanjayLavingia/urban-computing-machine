@@ -1,0 +1,55 @@
+//makes the app take up the whole page
+body > #root > div {
+  height: 100vh;
+}
+
+.teamInfo {
+    padding: 25px;
+    background-color: #778899;
+    box-shadow: 5px 5px 5px darkgrey;
+    border: 1px solid rgb(189, 189, 189);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: lightgray
+}
+
+.removeTeam {
+  display: flex; 
+  justify-content: flex-end;
+}
+
+.myTeamsHeader {
+   /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTeamDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+.addTeam {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: "white";
+  padding: 10px; 
+}
+
+.app {
+  background-color: #B0C4DE;
+}
+
+.window {
+  background-color:  #B0C4DE;
+}
+.teamButton {
+    color: "white";
+    background-color: #F5FFFA;
+    padding: 10px;
+}

@@ -1,38 +1,29 @@
 import React from 'React';
 
 function TeamThread(props) {
-  const teamThreadStyles = {
-    padding: "50px",
-    backgroundColor: "#D3D3D3",
-    padding: "30px",
-    
-  }
-  const mystyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "10px",
-    fontFamily: "Arial"
-  };
+
   const result = []; 
   for (let i = 0; i < props.teams.length; i++) {
-    result.push(<div
+    result.push(<span
       className="teamInfo"
-      style={teamThreadStyles} 
+       
       key={`teamThread${i}`}
       > 
       {`${props.teams[i].name} vs ${props.teams[i].opp} on ${props.teams[i].date} at ${props.teams[i].time}`} 
       <button 
+      className="removeTeam"
       name={props.teams[i].name} 
       onClick={props.remove}
       >
-        Remove
+        X
         </button>
-        </div>)
+        </span>)
   }  
   console.log(props); 
   return <div>
     {result}
   </div>
 }
+
 
 export default TeamThread;
